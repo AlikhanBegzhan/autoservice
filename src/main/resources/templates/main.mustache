@@ -8,11 +8,12 @@
     <body>
 
         <div>
+            Enter car information to add car to list:
             <form method="POST">
                 <input type="text" name="carModel" placeholder="car model">
                 <input type="text" name="carYear" placeholder="car year">
-                <input type="number" name="carMileage" placeholder="car mileage">
-                <input type="text" name="carOwnerName" placeholder="owner name">
+                <input type="text" name="carMileage" placeholder="car mileage">
+                <input type="text" name="carOwnerName" placeholder="owner name"><br/>
                 <input type="text" name="carOwnerNumber" placeholder="owner number">
                 <input type="text" name="carOwnerAddress" placeholder="owner address">
                 <input type="text" name="carMasterName" placeholder="master name">
@@ -21,10 +22,35 @@
             </form>
         </div><br/><br/>
 
-        Enter your full name to find your car:
+        Enter your full name to FIND your car:
         <form method="POST" action="filter">
             <input type="text" name="filter">
             <button type="submit">Find</button>
+        </form><br/><br/>
+
+        Enter your full name to DELETE your car:
+        <form method="POST" action="delete">
+            <input type="text" name="delete">
+            <button type="submit">Delete</button>
+        </form><br/><br/>
+
+        Enter your full name to UPDATE your<br/>
+        <i>Before you do, please be sure to find the correct Car!</i><br/>
+        <form method="POST" action="update">
+            Type car number:
+            <input type="number" name="carId" placeholder="car number"><br/>
+            <div>
+                Here are car details:<br/>
+                <input type="text" name="carModel" placeholder="car model">
+                <input type="text" name="carYear" placeholder="car year">
+                <input type="number" name="carMileage" placeholder="car mileage">
+                <input type="text" name="carOwnerName" placeholder="owner name"><br/>
+                <input type="text" name="carOwnerNumber" placeholder="owner number">
+                <input type="text" name="carOwnerAddress" placeholder="owner address">
+                <input type="text" name="carMasterName" placeholder="master name">
+                <input type="text" name="carMasterWork" placeholder="master work">
+                <button type="submit">Update</button>
+            </div>
         </form><br/><br/>
 
         <div> Cars List </div>

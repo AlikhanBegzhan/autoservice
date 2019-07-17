@@ -6,6 +6,43 @@
     </head>
 
     <body>
-        <div> {{some}} </div>
+
+        <div>
+            <form method="POST">
+                <input type="text" name="carModel" placeholder="car model">
+                <input type="text" name="carYear" placeholder="car year">
+                <input type="number" name="carMileage" placeholder="car mileage">
+                <input type="text" name="carOwnerName" placeholder="owner name">
+                <input type="text" name="carOwnerNumber" placeholder="owner number">
+                <input type="text" name="carOwnerAddress" placeholder="owner address">
+                <input type="text" name="carMasterName" placeholder="master name">
+                <input type="text" name="carMasterWork" placeholder="master work">
+                <button type="submit">Add</button>
+            </form>
+        </div><br/><br/>
+
+        Enter your full name to find your car:
+        <form method="POST" action="filter">
+            <input type="text" name="filter">
+            <button type="submit">Find</button>
+        </form><br/><br/>
+
+        <div> Cars List </div>
+        {{#cars}}
+        <div>
+            <ul>
+                <li>Car №: {{id}}</li>
+                <li>Car Model: {{carModel}}</li>
+                <li>Car Year: {{carYear}}</li>
+                <li>Car Mileage: {{carMileage}}</li>
+                <li>Car Owner Name: {{carOwnerName}}</li>
+                <li>Car Owner Number: {{carOwnerNumber}}</li>
+                <li>Car Owner Address: {{carOwnerAddress}}</li>
+                <li>Car Master Name: {{carMasterName}}</li>
+                <li>Car Master Work: {{carMasterWork}}</li>
+            </ul>
+        </div>
+        {{/cars}}
+
     </body>
 </html>

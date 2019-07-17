@@ -104,17 +104,17 @@ public class GreetingController {
         cars1 = carRepo.findById(carId);
         car = cars1.get();
 
-        if(carModel != "") car.setCarModel(carModel);
-        if(carYear != "") car.setCarYear(carYear);
-        if(carMileage != ""){
+        if(!"".equals(carModel)) car.setCarModel(carModel);
+        if(!"".equals(carYear)) car.setCarYear(carYear);
+        if(!"".equals(carMileage)){
             int mileage = Integer.parseInt(carMileage);
             car.setCarMileage(mileage);
         }
-        if(carOwnerName != "") car.setCarOwnerName(carOwnerName);
-        if(carOwnerNumber != "") car.setCarOwnerNumber(carOwnerNumber);
-        if(carOwnerAddress != "") car.setCarOwnerAddress(carOwnerAddress);
-        if(carMasterName != "") car.setCarMasterName(carMasterName);
-        if(carMasterWork != "") car.setCarMasterWork(carMasterWork);
+        if(!"".equals(carOwnerName)) car.setCarOwnerName(carOwnerName);
+        if(!"".equals(carOwnerNumber)) car.setCarOwnerNumber(carOwnerNumber);
+        if(!"".equals(carOwnerAddress)) car.setCarOwnerAddress(carOwnerAddress);
+        if(!"".equals(carMasterName)) car.setCarMasterName(carMasterName);
+        if(!"".equals(carMasterWork)) car.setCarMasterWork(carMasterWork);
 
         carRepo.save(car);
 
